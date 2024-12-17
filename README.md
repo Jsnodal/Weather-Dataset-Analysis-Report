@@ -1,5 +1,14 @@
-Weather Dataset Analysis Report
-Overview
+# data
+import kagglehub
+
+# Download latest version
+path = kagglehub.dataset_download("prasad22/weather-data")
+
+print("Path to dataset files:", path)
+
+
+# Weather Dataset Analysis Report
+ 
 This report summarizes the analysis conducted on a dataset containing 1,000,000 weather observations across various locations and timestamps. The dataset includes the following attributes:
 
 Location: The geographical location where weather data was recorded.
@@ -10,7 +19,7 @@ Precipitation_mm: Precipitation levels in millimeters.
 Wind_Speed_kmh: Wind speed in kilometers per hour.
 The goal of this analysis was to explore the dataset, identify trends, and evaluate potential predictions.
 
-Data Overview
+ 
 Dataset Summary
 Total Observations: 1,000,000
 Features: 6 columns (Location, Date_Time, Temperature_C, Humidity_pct, Precipitation_mm, Wind_Speed_kmh)
@@ -21,7 +30,7 @@ Temperature_C, Humidity_pct, Precipitation_mm, Wind_Speed_kmh: Numerical (float6
 Memory Usage:
 The dataset occupies 45.8 MB, which is efficient for handling large-scale weather data.
 
-Exploratory Data Analysis (EDA)
+# Exploratory Data Analysis (EDA)
 1. Missing Values
 No missing values were found in the dataset, as indicated by the following summary:
 
@@ -40,7 +49,8 @@ Temperature_C	-20.5°C	45.8°C	20.3°C	10.5°C
 Humidity_pct	10%	100%	65.2%	20.3%
 Precipitation_mm	0 mm	150 mm	5.8 mm	15.4 mm
 Wind_Speed_kmh	0 km/h	120 km/h	15.2 km/h	12.8 km/h
-Trends and Insights
+
+# Trends and Insights
 1. Temperature Patterns
 Global Averages:
 The average temperature across all locations is approximately 20.3°C, with occasional extreme values ranging from -20.5°C (likely high-altitude or winter data) to 45.8°C (desert or summer data).
@@ -78,12 +88,12 @@ Forecast future temperatures based on Humidity_pct, Precipitation_mm, and Wind_S
 Rainfall Prediction (Classification):
 Predict the occurrence of rainfall (Precipitation_mm > 0) as a binary classification task.
 
-Time-Series Forecasting:
+# Time-Series Forecasting:
 
 Predict future weather conditions using Date_Time as a temporal feature.
 Example: Forecast temperature or precipitation for the next 7 days.
 Extreme Weather Event Detection:
 Classify extreme events such as storms or droughts based on outliers in Wind_Speed_kmh and Temperature_C.
 
-Conclusion
+# Conclusion
 This dataset is well-structured and suitable for both exploratory analysis and predictive modeling. Initial trends indicate strong seasonal and regional patterns, as well as interrelationships among key weather parameters. The potential for temperature, precipitation, and wind-speed forecasting makes this dataset valuable for climate analysis, event prediction, and weather modeling.
